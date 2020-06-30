@@ -20,6 +20,7 @@ module.exports = {
     password: 'GDIIzkB5aifDBYrpo3mW',
     database: 'myplayoff_production',
     host: 'j-organise-u-6981.postgresql.dbs.scalingo.com',
+    port: '32283',
     dialect: 'postgres',
     logging: (msg) => console.log('[DATABASE]', msg)
   }
