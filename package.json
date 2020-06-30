@@ -6,6 +6,7 @@
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
     "test": "npm run db:test:migrate && NODE_ENV=test mocha --recursive",
+    "test:windows": "SET NODE_ENV=test&& mocha --recursive",
     "db:init": "npx sequelize db:create",
     "db:migrate": "npx sequelize db:migrate",
     "db:seed": "npx sequelize db:seed:all",
@@ -25,7 +26,7 @@
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.6",
-    "sequelize-cli":"^5.5.1"
+    "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
