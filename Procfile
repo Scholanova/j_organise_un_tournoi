@@ -1,1 +1,1 @@
-postdeploy: npm run db:migrate
+postdeploy: npm run db:seed
