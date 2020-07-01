@@ -21,6 +21,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      status:{
+        defaultValue:true,
+        type: Sequelize.BOOLEAN
       }
     });
   },
