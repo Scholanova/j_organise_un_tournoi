@@ -13,7 +13,7 @@ module.exports = {
       }], {});
     */
 
-   return queryInterface.bulkInsert('Matches',[
+   return queryInterface.bulkInsert('Matchs',[
     {
       id:1,
       competition:42000,
