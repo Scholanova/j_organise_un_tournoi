@@ -2,7 +2,7 @@ module.exports = {
   development: {
     username: 'postgres',
     password: 'postgres',
-    database: 'scholanova_express_juin_development',
+    database: 'myplayoff_development',
     host: '127.0.0.1',
     dialect: 'postgres',
     logging: (msg) => console.log('[DATABASE]', msg)
@@ -10,16 +10,13 @@ module.exports = {
   test: {
     username: 'postgres',
     password: 'postgres',
-    database: 'scholanova_express_juin_test',
+    database: 'myplayoff_test',
     host: '127.0.0.1',
     dialect: 'postgres',
     logging: false
   },
   production: {
-    username: 'postgres',
-    password: 'postgres',
-    database: 'scholanova_express_juin_production',
-    host: '127.0.0.1',
+    use_env_variable:'DATABASE_URL',
     dialect: 'postgres',
     logging: (msg) => console.log('[DATABASE]', msg)
   }
