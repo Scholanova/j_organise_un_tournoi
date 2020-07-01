@@ -9,8 +9,9 @@ module.exports = {
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
-    return queryInterface.addColumn('tournoi', 'status', {
-      type: Sequelize.DataTypes.BOOLEAN
+    return queryInterface.addColumn('tournois', 'status', {
+      type: Sequelize.DataTypes.BOOLEAN,
+      defaultValue: true
     });
   },
 
@@ -22,6 +23,6 @@ module.exports = {
       Example:
       return queryInterface.dropTable('users');
     */
-    return queryInterface.removeColumn('tournoi','status');
+    return queryInterface.removeColumn('tournois','status');
   }
 };

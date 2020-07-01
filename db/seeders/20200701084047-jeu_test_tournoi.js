@@ -13,14 +13,18 @@ module.exports = {
       }], {});
     */
 
-    return queryInterface.bulkInsert('tournoi',[{
+    return queryInterface.bulkInsert('tournois',[{
       id:42000,
       name:'tounoi smash bros ultimate',
+      createdAt: new Date('2020-06-28T15:24:00'),
+      updatedAt: new Date('2020-07-02T03:56:00'),
       status:true
     },
     {
       id:42001,
-      name:'coiupe du monde 2022',
+      name:'coupe du monde 2022',
+      createdAt: new Date('1995-06-28T15:24:00'),
+      updatedAt: new Date('1995-07-02T03:56:00'),
       status:false
     }])
   },
@@ -33,6 +37,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-   return queryInterface.bulkDelete('tournoi', null, {});
+   return queryInterface.bulkDelete('tournois', null, {});
   }
 };
