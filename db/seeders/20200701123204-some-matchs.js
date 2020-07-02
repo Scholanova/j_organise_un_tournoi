@@ -13,7 +13,7 @@ module.exports = {
       }], {});
     */
 
-   return queryInterface.bulkInsert('Matchs',[
+   return queryInterface.bulkInsert('Matches',[
     {
       id:1,
       competition:42000,
@@ -81,6 +81,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-   return queryInterface.bulkDelete('Matchs', null, {});
+   return queryInterface.bulkDelete('Matches', null, {});
   }
 };
