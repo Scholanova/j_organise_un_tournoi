@@ -27,3 +27,13 @@ p , h1 {
   /*color: whitesmoke;*/
   font-weight: bold;
 }
+
+#btn{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #5CCA87;
+  background-color: black;
+  border-color: black;
+}
