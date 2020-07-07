@@ -9,14 +9,17 @@ body{
     font-size: 1em;
     font-weight: bold;
     color: #5CCA87;
-    background-color: black;
-    border-color: black;
+    background-color: #434343;
+    border-color: #434343;
 }
 
 p{
-    font-weight: bold;
+    font-family: 'Holtwood One SC', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 0px;
 }
 
 /*#wheremettrelesparticipants{
