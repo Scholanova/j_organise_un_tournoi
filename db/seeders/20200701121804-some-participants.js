@@ -14,49 +14,49 @@ module.exports = {
     */
    return queryInterface.bulkInsert('Participants',[
     {
-      id:1,
+      id:42001,
       name:'Aurelien',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:2,
+      id:42002,
       name:'Djibril',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:3,
+      id:42003,
       name:'Nacer',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:4,
+      id:42004,
       name:'Benoit',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:5,
+      id:42005,
       name:'CyrYl',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:6,
+      id:42006,
       name:'Rémy',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:7,
+      id:42007,
       name:'Eva',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
     },
     {
-      id:8,
+      id:42008,
       name:'François',
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
