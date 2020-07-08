@@ -21,7 +21,7 @@ module.exports = {
         createdAt: new Date('2020-06-28T15:24:00'),
         updatedAt: new Date('2020-07-02T03:56:00'),
         status:true,
-        vainqueur : 1,
+        vainqueur : 42001,
         name_organisateur : 'Benoit'
       }
     ])

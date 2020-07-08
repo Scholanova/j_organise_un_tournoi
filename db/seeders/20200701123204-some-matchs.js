@@ -15,67 +15,67 @@ module.exports = {
 
    return queryInterface.bulkInsert('Matches',[
     {
-      id:1,
+      id:42000,
       competition:42000,
-      p1:1,
-      p2:2,
+      p1:42001,
+      p2:42002,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 1
+      vainqueur: 42001
     },
     {
-      id:2,
+      id:42001,
       competition:42000,
-      p1:3,
-      p2:4,
+      p1:42003,
+      p2:42004,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 3
+      vainqueur: 42003
     },
     {
-      id:3,
+      id:42002,
       competition:42000,
-      p1:5,
-      p2:6,
+      p1:42005,
+      p2:42006,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 5
+      vainqueur: 42005
     },
     {
-      id:4,
+      id:42003,
       competition:42000,
-      p1:7,
-      p2:8,
+      p1:42007,
+      p2:42008,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 7
+      vainqueur: 42007
     },
     {
-      id:5,
+      id:42004,
       competition:42000,
-      p1:1,
-      p2:3,
+      p1:42001,
+      p2:42003,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 1
+      vainqueur: 42001
     },
     {
-      id:6,
+      id:42005,
       competition:42000,
-      p1:5,
-      p2:7,
+      p1:42005,
+      p2:42007,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 5
+      vainqueur: 42005
     },
     {
-      id:7,
+      id:42006,
       competition:42000,
-      p1:1,
-      p2:5,
+      p1:42001,
+      p2:42005,
       createdAt: new Date('2020-06-28T15:24:00'),
       updatedAt: new Date('2020-07-02T03:56:00'),
-      vainqueur: 1
+      vainqueur: 42001
     }
   ])
   },
