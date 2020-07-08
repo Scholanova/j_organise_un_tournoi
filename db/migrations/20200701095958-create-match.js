@@ -49,7 +49,16 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+      vainqueur: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Participants',
+          key: 'id'
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

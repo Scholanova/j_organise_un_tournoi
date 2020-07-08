@@ -25,7 +25,21 @@ module.exports = {
       status:{
         defaultValue:true,
         type: Sequelize.BOOLEAN
-      }
+      },
+      name_organisateur:{
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      vainqueur: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Participants',
+          key: 'id'
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
+      },
+
     });
   },
   down: (queryInterface, Sequelize) => {

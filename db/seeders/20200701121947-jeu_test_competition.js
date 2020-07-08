@@ -13,22 +13,18 @@ module.exports = {
       }], {});
     */
 
-    return queryInterface.bulkInsert('Competitions',[{
-      id:42000,
-      name:'tounoi smash bros ultimate',
-      nb_participant:16,
-      createdAt: new Date('2020-06-28T15:24:00'),
-      updatedAt: new Date('2020-07-02T03:56:00'),
-      status:true
-    },
-    {
-      id:42001,
-      name:'coupe du monde 2022',
-      nb_participant:8,
-      createdAt: new Date('1995-06-28T15:24:00'),
-      updatedAt: new Date('1995-07-02T03:56:00'),
-      status:false
-    }])
+    return queryInterface.bulkInsert('Competitions',[
+      {
+        id:42000,
+        name:'tounoi smash bros ultimate',
+        nb_participant:8,
+        createdAt: new Date('2020-06-28T15:24:00'),
+        updatedAt: new Date('2020-07-02T03:56:00'),
+        status:true,
+        vainqueur : 1,
+        name_organisateur : 'Benoit'
+      }
+    ])
   },
 
   down: (queryInterface, Sequelize) => {
