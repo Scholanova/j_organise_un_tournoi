@@ -1,29 +1,31 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.title {
-  color: #00B7FF;
-}
-
-.subtitle {
-  color: #527c8d;
-}*/
 .masthead {
   height: 100vh;
   min-height: 500px;
- /* background-color: rgba(53,52,52,0.9);*/
   background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-p , h1 {
-  /*color: whitesmoke;*/
+h1 {
+  font-family: 'Holtwood One SC', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+
+#btn, #btn-historique{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
   font-weight: bold;
+  color: #5CCA87;
+  background-color: #434343;
+  border-color: #434343;
+}
+
+#btn, #ou, #btn-historique{
+  display: inline-block;
 }
