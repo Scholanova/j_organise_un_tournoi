@@ -36,6 +36,10 @@ body {
   padding: 0.5em 5px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .hero p.intro {
   font-family: 'Holtwood One SC', serif;
   text-transform: uppercase;
