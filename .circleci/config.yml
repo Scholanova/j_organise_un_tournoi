@@ -8,7 +8,7 @@ executors:
         environment:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: scholanova_express_juin_test
+          POSTGRES_DB: myplayoff_test
 
 jobs:
   test_node:

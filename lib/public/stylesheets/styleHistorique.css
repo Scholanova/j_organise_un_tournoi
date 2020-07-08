@@ -1,0 +1,45 @@
+h1{
+text-align: center;
+    font-family: 'Holtwood One SC', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+h2{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    font-family: 'Holtwood One SC', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+#div1, #div2{
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+    padding-bottom: 3%;
+    font-family: 'Holtwood One SC', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+#btn-historique{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #5CCA87;
+    background-color: #434343;
+    border-color: #434343;
+}
