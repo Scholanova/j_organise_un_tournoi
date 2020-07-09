@@ -43,15 +43,32 @@ describe('competitionService', () => {
         context('when there is competition', () => {
             beforeEach(()=>{
                 // given
-                
+                const competition =
+                    {
+                        id: 42000,
+                        name_organisateur: 'Benoit',
+                        name: 'tounoi smash bros ultimate',
+                        nb_participant: 8,
+                        status: true,
+                        vainqueur: 42001
+                    }
+
+                competitionRepository.listAll.resolves([competition])
                 // when
-                competitionRepository.listAll.resolves()
-                result = competitionService.findAll()
+                
+                competitionListAllPromise = competitionService.findAll()
+                
             })
             it('should call the competition Repository', async () => {
                 // then
-                await result.catch(() => {})
-                expect(competitionRepository.listAll()).to.have.been.called
+                await competitionListAllPromise.catch(() => {})
+                expect(competitionRepository.listAll).to.have.been.called
+            })
+            it('should result to an array', async () => {
+                // then
+                await competitionListAllPromise.catch(() => {})
+
+                expect(competitionRepository.listAll).to.eventually.deep.equal([competition])
             })
             
         })
