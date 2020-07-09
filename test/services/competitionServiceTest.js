@@ -1,4 +1,4 @@
-const { expect, sinon } = require('../testHelper')
+const { expect, sinon,factory } = require('../testHelper')
 const competitionService = require('../../lib/services/competitionServices')
 const competitionRepository = require('../../lib/repositories/competitionRepository')
 const Joi = require('@hapi/joi')
@@ -14,9 +14,11 @@ describe('competitionService', () => {
         context('when the competition data is valid', () => {
             let competition
             beforeEach(() => {
+
+                
                 // given
-                competitionData = { name_organisateur: 'Coupe du monde 2022', name: 'Equipe 1', nb_participant: 8,status:false }
-                competition = new Competition(competitionData)
+                competitionData = { name_organisateur: 'Equipe 1', name: 'coupe du monde 2022', nb_participant: 8,status:false }
+                competition = factory.createCompetition()
                 competitionRepository.create.resolves(competition)
                 // when
                 competitionCreationPromise = competitionService.create(competitionData)
@@ -32,222 +34,26 @@ describe('competitionService', () => {
                 return expect(competitionCreationPromise).to.eventually.equal(competition)
             })
         })
-        context('when the competition name is missing', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: 'Coupe du monde 2022', name: undefined, nb_participant: 8,status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about missing name', () => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"name" is required',
-                    path: ['name'],
-                    type: 'any.required',
-                    context: { label: 'name', key: 'name' }
-                }]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
-        context('when the competition name is empty', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: 'Coupe du monde 2022', name: '', nb_participant: 8,status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about missing name', () => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"name" is not allowed to be empty',
-                    path: ['name'],
-                    type: 'string.empty',
-                    context: { label: 'name', key: 'name', value: '' }
-                }]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
-
-        context('when the competition name of organizer is empty', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: '', name: 'Equipe 1', nb_participant: 8,status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about missing name', () => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"name_organisateur" is not allowed to be empty',
-                    path: ['name_organisateur'],
-                    type: 'string.empty',
-                    context: { label: 'name_organisateur', key: 'name_organisateur', value: '' }
-                }]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
-
-
-        context('when the competition number participant is missing', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: 'Coupe du monde 2022', name: 'Equipe 1', nb_participant: undefined,status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about missing number of participant', () => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"nb_participant" is required',
-                    path: ['nb_participant'],
-                    type: 'any.required',
-                    context: { label: 'nb_participant', key: 'nb_participant' }
-                }]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
-        context('when the competition name of organizer is missing', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: undefined, name: 'Equipe 1', nb_participant: 8,status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about missing name of organizer', () => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"organizer" is required',
-                    path: ['name_organisateur'],
-                    type: 'any.required',
-                    context: { label: 'name_organisateur', key: 'name_organisateur' }
-                }]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
-        context('when the competition name and number of participant are missing', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: 'Coupe du monde 2022',status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about missing email', () => {
-                // then
-                const expectedErrorDetails = [
-                    {
-                        context: { key: 'name', label: 'name' },
-                        message: '"name" is required',
-                        path: ['name'],
-                        type: 'any.required'
-                    },
-                    {
-                        context: { key: 'nb_participant', label: 'nb_participant' },
-                        message: '"nb_participant" is required',
-                        path: ['nb_participant'],
-                        type: 'any.required'
-                    }
-                ]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
-        context('when the competition number of participant is not number pair', () => {
-            beforeEach(() => {
-                // given
-                competitionData = { name_organisateur: 'Coupe du monde 2022', name: 'Equipe 1', nb_participant: 1,status:false }
-                // when
-                competitionCreationPromise = competitionService.create(competitionData)
-            })
-            it('should not call the competition Repository', async () => {
-                // then
-                await competitionCreationPromise.catch(() => {})
-                expect(competitionRepository.create).to.not.have.been.called
-            })
-            it('should reject with a ValidationError error about unsupported language', () => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"number of participant" must be number pair',
-                    path: ['number of participant'],
-                    type: 'any.only',
-                    context: { label: 'nb_participant', key: 'nb_participant', valids: [2, 4,6,8,10,16,16], 'value': 1 }
-                }]
-                return expect(competitionCreationPromise)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
-        })
     })
-
     describe('findAll', () => {
         let result
         beforeEach(() => {
-            sinon.stub(competitionRepository, 'findAll')
+            sinon.stub(competitionRepository, 'listAll')
         })
-        context('when the competition number of participant is missing', () => {
+        context('when there is competition', () => {
             beforeEach(()=>{
                 // given
+                
                 // when
-                result = competitionService.findAll({nb_participant : undefined})
+                competitionRepository.listAll.resolves()
+                result = competitionService.findAll()
             })
-            it('should not call the competition Repository', async () => {
+            it('should call the competition Repository', async () => {
                 // then
                 await result.catch(() => {})
-                expect(competitionRepository.listAll()).to.not.have.been.called
+                expect(competitionRepository.listAll()).to.have.been.called
             })
-            it('should reject with a ValidationError error about missing number of participant', ()  => {
-                // then
-                const expectedErrorDetails = [{
-                    message: '"number of participat" is required',
-                    path: ['nb_participant'],
-                    type: 'any.required',
-                    context: { label: 'nb_participant', key: 'nb_participant' }
-                }]
-                return expect(result)
-                    .to.eventually.be.rejectedWith(Joi.ValidationError)
-                    .with.deep.property('details', expectedErrorDetails)
-            })
+            
         })
         context('when the competition number of participant is not a number pair', () => {
             beforeEach(()=>{
