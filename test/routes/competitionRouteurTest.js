@@ -8,6 +8,7 @@ const matchRepository = require('../../lib/repositories/matchRepository')
 const matchService = require('../../lib/services/matchServices')
 const participantRepository = require('../../lib/repositories/participantRepository')
 const participantService = require('../../lib/services/participantServices')
+const validatorService = require('../../lib/services/validatorServices')
 const models = require('../../lib/models')
 const competition = models.Competition
 describe('competitionRouter', ()=>{
@@ -66,6 +67,7 @@ describe('competitionRouter', ()=>{
             sinon.stub(competitionService, 'create')
             sinon.stub(matchService, 'createAllMatch')
             sinon.stub(participantService, 'createAllParticipant')
+            sinon.stub(validatorService, 'createCompetition')
         })
         context('when the competition creation succeeds', () => {
             let competition
@@ -75,6 +77,7 @@ describe('competitionRouter', ()=>{
                 competitionService.create.resolves(competition)
                 matchService.createAllMatch.resolves([1,2])
                 participantService.createAllParticipant.resolves([1,2,3,4])
+                validatorService.createCompetition.resolves()
                 // when
                 response = await request(app)
                     .post('/competition/new')
@@ -118,7 +121,7 @@ describe('competitionRouter', ()=>{
                 }]
                 errorMessage = '"number of participant" is required'
                 validationError = new Joi.ValidationError(errorMessage, errorDetails, undefined)
-                competitionService.create.rejects(validationError)
+                validatorService.createCompetition.rejects(validationError)
                 previousNameValue = 'Some special name for a organisateur'
                 // when
                 response = await request(app)
@@ -129,7 +132,7 @@ describe('competitionRouter', ()=>{
             })
             it('should call the service with competition data', () => {
                 // then
-                expect(competitionService.create).to.have.been.calledWith({
+                expect(validatorService.createCompetition).to.have.been.calledWith({
                     name_organisateur: previousNameValue, name: undefined, nb_participant: undefined
                 })
             })
