@@ -105,7 +105,7 @@ a{
 .champion {
   display:block;
   width: 45%;
-  height: 100%;
+  height: 60%;
   -webkit-flex-direction:row;
   flex-direction:row;
   -webkit-align-self:center;
@@ -114,17 +114,18 @@ a{
   margin-left: 15px;
   text-align: center;
   padding: 230px 0\9;
-  margin-top: -50px;
- /* background-color: #2C7399;*/
+  margin-top: 10px;
+  /*background-color: #2C7399;*/
 }
 
 .champion i {
   color: #eec600;
   font-size: 45px;
   padding: 17px 10px;
- /* background-color: red;*/
+  /*background-color: red;*/
   margin-top: -50px;
 }
+
 
 .round {
   display:block;
@@ -136,7 +137,7 @@ a{
   display:flex;
   -webkit-flex-direction:column;
   flex-direction:column;
-  width:95%;
+  width:110%;
   width:30.8333%\9;
 }
 
@@ -145,7 +146,7 @@ a{
 }
 
 .split-one .round {
-  margin: 0 2.5% 0 0;
+  margin: 0 3% 0 0;
 }
 
 .split-two .round {
@@ -155,10 +156,12 @@ a{
 .matchup {
   margin:0;
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
   height:60px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  padding-top: 20%;
+ /* background-color: green;*/
 }
 
 .score {
@@ -172,8 +175,38 @@ a{
   right: 5px;
 }
 
+div.round.round-two{
+  padding-top: -3%;
+}
+
+div.round.round-three{
+  padding-top: 8%;
+}
+
+div.round.round-four{
+  padding-top: 40%;
+}
+
+ul.matchup.championship {
+  height: 20%;
+  /*background-color: mediumvioletred;*/
+}
+
+li.team.team-top{
+  /*background-color: yellow;*/
+}
+
+li.team.team-bottom, li.team.team-top{
+  display:block;
+}
+
+li.team.team-bottom {
+ /* background-color: violet;*/
+}
+
 .team {
-  padding: 0 5px;
+  padding-top: 10px;
+  padding:0 5px;
   margin: 15px 0;
   height: 25px;
   line-height: 25px;
@@ -185,7 +218,7 @@ a{
 .round-two .matchup {
   margin:0;
   height: 60px;
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .round-three .matchup {
@@ -196,8 +229,8 @@ a{
 
 .round-four .matchup {
   margin:0;
-  height: 60px;
-  padding: 130px 0;
+  height: 50px;
+  padding: 150px 0;
 }
 
 .round-details {
@@ -221,7 +254,7 @@ a{
 
 .current li.team {
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(108, 255, 73, 0.63);
   opacity: 1;
 }
 
