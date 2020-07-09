@@ -47,18 +47,23 @@ a{
   font-size: 1.5em;
   margin-bottom: 5px;
   margin-top: 0px;
+  width: 25%;
+  margin: auto;
 }
 
 .hero p.year {
   color: #fff;
   letter-spacing: 10px;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: gold;
   margin: -5px 0 5px;
 }
 
 .hero p.year i {
-  font-size: 5px;
+  font-size: 10px;
   vertical-align: middle;
+  color: gold;
 }
 
 #bracket {
@@ -98,22 +103,26 @@ a{
 }
 
 .champion {
-  float:left;
   display:block;
   width: 16%;
   -webkit-flex-direction:row;
   flex-direction:row;
   -webkit-align-self:center;
   align-self:center;
-  margin-top: 15px;
+  margin-bottom: 12px;
+  margin-left: 15px;
   text-align: center;
   padding: 230px 0\9;
+ /* background-color: #2C7399;*/
+  margin-top: -30px;
 }
 
 .champion i {
-  color: #a0a6a8;
+  color: #eec600;
   font-size: 45px;
-  padding: 10px 0;
+  padding: 17px 10px;
+ /* background-color: red;*/
+  margin-top: -50px;
 }
 
 .round {
@@ -220,9 +229,9 @@ a{
 }
 
 .share-icon {
-  font-size: 24px;
+  font-size: 35px;
   color: #fff;
-  padding: 25px;
+  padding: 15px;
 }
 
 .share-wrap {
