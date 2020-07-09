@@ -12,7 +12,8 @@ Ce projet à pour but de gérer des tounois de taille multiples :
 2. Les technologies
 
 Nous avons utlilisés les technologies suivantes :
-* Front-end/back-end : [Express](http://expressjs.com/)
+* Front-end :  HTML, CSS, javascript, [BootStrap](https://getbootstrap.com/), [EJS](https://ejs.co/)
+* Back-end : [Framework Express](http://expressjs.com/)
 * ORM : [Sequelize](https://sequelize.org/)
 * base de données : [postgresql](https://www.postgresql.org/)
 * Intégration continue : [circle ci](https://circleci.com/)
