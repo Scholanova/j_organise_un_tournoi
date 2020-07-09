@@ -127,13 +127,13 @@ describe('competitionRouter', ()=>{
                 response = await request(app)
                     .post('/competition/new')
                     .type('form')
-                    .send({ organisateur: previousNameValue,participants:['aaaa','bbbb','cccc','dddd'] })
+                    .send({ organisateur: previousNameValue })
                     .redirects(0)
             })
             it('should call the service with competition data', () => {
                 // then
                 expect(validatorService.createCompetition).to.have.been.calledWith({
-                    name_organisateur: previousNameValue, name: undefined, nb_participant: undefined
+                    name_organisateur: previousNameValue, name: undefined, nb_participant: undefined,participants:undefined
                 })
             })
             it('should succeed with a status 200', () => {
