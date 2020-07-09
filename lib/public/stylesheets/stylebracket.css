@@ -114,7 +114,7 @@ a{
   margin-left: 15px;
   text-align: center;
   padding: 230px 0\9;
-<<<<<<< HEAD
+<<<<<<
   margin-top: -50px;
 =======
  /* background-color: #2C7399;*/
@@ -193,6 +193,12 @@ a{
 }
 
 .round-three .matchup {
+  margin:0;
+  height: 60px;
+  padding: 130px 0;
+}
+
+.round-four .matchup {
   margin:0;
   height: 60px;
   padding: 130px 0;
