@@ -30,5 +30,5 @@ Cette technologie est aussi connu de Circle Ci et Scalingo, ce qui a permis une 
 
 Nous avons nommé les variables de la manière suivante : 
 * Un modèle voit sa première lettre en majuscule, le reste en minuscule
-* un id contient forcément le mot-cle 'id' dans son nom
+* un id contient forcément le mot-clé 'id' dans son nom
 
