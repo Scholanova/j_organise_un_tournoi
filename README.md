@@ -22,6 +22,13 @@ Le projet est hébergé sur [Scalingo](https://scalingo.com/fr) juste [ici](http
 3. Le choix de l'architecture
 
 Nous avons choisi une architecture MVC car la technologie express s'y prête et facilite la gestion des routes, l'orm sequelize s'intègre bien avec express pour la connexion avec la base de données.
-De plus, ce style d'architecture technique est devenu un standard web de ces dernières année et est appréciée des développeurs. 
+De plus, ce style d'architecture applicative est devenu un standard web de ces dernières année et est appréciée des développeurs.
 
 Cette technologie est aussi connu de circle ci et Scalingo, ce qui a permis une intégration et une livraison continue à chacun de nos commits sur github : Un déploiement automatique se fait sur scalingo dès qu'une modification est faite sur la branche master, les tests sont automatiquement démarrés dès qu'une merge request est ouverte.
+
+4. Les conventions de nommages
+
+Chaque modèle est nommé de la manière suivante : 
+* Modèle (la première lettre en majuscule, le reste en minuscule)
+* un id contient forcément le mot-cle 'id' dans son nom
+
