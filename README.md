@@ -34,5 +34,10 @@ Nous avons nommé les variables de la manière suivante :
 
 5. Les difficultés rencontrées
 
+Nous avons rencontré les difficultés suivantes :
 
+* calcul de l'id du prochain match en fonction du match en cours et des matchs des autres competitions antérieures
+* l'écriture des tests
+* la génération du bracket
+* la résolution des conflits lors de merges
 
