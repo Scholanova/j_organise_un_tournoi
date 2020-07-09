@@ -104,7 +104,8 @@ a{
 
 .champion {
   display:block;
-  width: 16%;
+  width: 45%;
+  height: 100%;
   -webkit-flex-direction:row;
   flex-direction:row;
   -webkit-align-self:center;
@@ -113,8 +114,7 @@ a{
   margin-left: 15px;
   text-align: center;
   padding: 230px 0\9;
- /* background-color: #2C7399;*/
-  margin-top: -30px;
+  margin-top: -50px;
 }
 
 .champion i {
@@ -173,7 +173,7 @@ a{
 
 .team {
   padding: 0 5px;
-  margin: 3px 0;
+  margin: 15px 0;
   height: 25px;
   line-height: 25px;
   white-space: nowrap;
