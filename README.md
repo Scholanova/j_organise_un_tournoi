@@ -28,7 +28,7 @@ Cette technologie est aussi connu de circle ci et Scalingo, ce qui a permis une 
 
 4. Les conventions de nommages
 
-Nou avons nommé les variables de la manière suivante : 
+Nous avons nommé les variables de la manière suivante : 
 * Un modèle voit sa première lettre en majuscule, le reste en minuscule
 * un id contient forcément le mot-cle 'id' dans son nom
 
