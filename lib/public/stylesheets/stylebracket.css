@@ -193,6 +193,12 @@ a{
   padding: 130px 0;
 }
 
+.round-four .matchup {
+  margin:0;
+  height: 60px;
+  padding: 130px 0;
+}
+
 .round-details {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 13px;
