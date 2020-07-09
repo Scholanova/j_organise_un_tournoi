@@ -115,14 +115,14 @@ a{
   text-align: center;
   padding: 230px 0\9;
   margin-top: -50px;
- /* background-color: #2C7399;*/
+  background-color: #2C7399;
 }
 
 .champion i {
   color: #eec600;
   font-size: 45px;
   padding: 17px 10px;
- /* background-color: red;*/
+  background-color: red;
   margin-top: -50px;
 }
 
@@ -145,7 +145,7 @@ a{
 }
 
 .split-one .round {
-  margin: 0 2.5% 0 0;
+  margin: 0 3% 0 0;
 }
 
 .split-two .round {
@@ -155,8 +155,8 @@ a{
 .matchup {
   margin:0;
   width: 100%;
-  padding: 10px 0;
-  height:60px;
+  padding: 20px 0;
+  height:50px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
